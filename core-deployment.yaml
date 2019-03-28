@@ -1,0 +1,23 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: coredocker
+spec:
+  selector:
+    matchLabels:
+      app: coredocker
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: coredocker 
+    spec:
+      containers:
+      - name: coredocker
+        image: shuanger/core-12345  # or just image: redis
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort: 12345

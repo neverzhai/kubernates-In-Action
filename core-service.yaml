@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: coredocker
+  labels:
+    app: coredocker
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8181
+    targetPort: 12345 
+  selector:
+    app: coredocker

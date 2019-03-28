@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreDocker", "CoreDocker\CoreDocker.csproj", "{A036F2AF-E159-40A6-80D5-54125A040ED4}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E4F9BD1D-A1E7-417F-A0E1-B8CC4825F410}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{A036F2AF-E159-40A6-80D5-54125A040ED4}.Release|x64.Build.0 = Release|Any CPU
 		{A036F2AF-E159-40A6-80D5-54125A040ED4}.Release|x86.ActiveCfg = Release|Any CPU
 		{A036F2AF-E159-40A6-80D5-54125A040ED4}.Release|x86.Build.0 = Release|Any CPU
+		{E4F9BD1D-A1E7-417F-A0E1-B8CC4825F410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4F9BD1D-A1E7-417F-A0E1-B8CC4825F410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4F9BD1D-A1E7-417F-A0E1-B8CC4825F410}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E4F9BD1D-A1E7-417F-A0E1-B8CC4825F410}.Debug|x64.Build.0 = Debug|Any CPU
+		{E4F9BD1D-A1E7-417F-A0E1-B8CC4825F410}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E4F9BD1D-A1E7-417F-A0E1-B8CC4825F410}.Debug|x86.Build.0 = Debug|Any CPU
+		{E4F9BD1D-A1E7-417F-A0E1-B8CC4825F410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4F9BD1D-A1E7-417F-A0E1-B8CC4825F410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4F9BD1D-A1E7-417F-A0E1-B8CC4825F410}.Release|x64.ActiveCfg = Release|Any CPU
+		{E4F9BD1D-A1E7-417F-A0E1-B8CC4825F410}.Release|x64.Build.0 = Release|Any CPU
+		{E4F9BD1D-A1E7-417F-A0E1-B8CC4825F410}.Release|x86.ActiveCfg = Release|Any CPU
+		{E4F9BD1D-A1E7-417F-A0E1-B8CC4825F410}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

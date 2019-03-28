@@ -1,6 +1,6 @@
 FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
 WORKDIR /app
-EXPOSE 2333
+EXPOSE 12345 
 
 FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src

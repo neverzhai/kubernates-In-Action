@@ -2,6 +2,9 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: pod-with-lable
+  labels:                  // 加标签
+    create-method: manual
+    env: pod
 spec:
   containers:
   - image: shuanger/core-12345

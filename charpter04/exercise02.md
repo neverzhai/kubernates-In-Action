@@ -6,6 +6,12 @@
         * 替换过程中，不允许手动重建pod
         * 替换后，原有的replication controller不允许仍然存在于集群中
 
+**Answer:**
+```bash
+- kubectl create -f kubia-replicaset.yaml
+- kubectl delete rc kubia --cascade=false
+```
+
 * Replica set's expression label selectors  
 We have six pods as following  
 [  
@@ -71,6 +77,12 @@ It also can be described by a table:
 | AppSix | Angular | TypeScript | V5.0.3 | / |
 
 Please create a ReplicaSet which only manage AppFive and AppSix.
+
+**Answer:**
+```bash
+ Questions: 如何有多个tempate,
+ 如果只能有一个template, 其余的pod该如何加入进去。
+```
 
 ## Part 2 DaemonSet
 * please create a daemonset make all nodes which has the label "hello:world" has a pod you created on practice 5.

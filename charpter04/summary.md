@@ -128,3 +128,34 @@ kubectl create -f kubia-replicaSet.yaml
 
  # DaemonSet
  - DaemonSet的作用是在每个节点上运行一个pod, 也可以只在特定的节点上运行pod.
+ - DaemonSet与RC，RS不同的是，它不是保证有多少个pod副本在运行，而是保证匹配标签选择器的节点上都运行了一个pod.
+
+```bash
+kubectl create -f ssd-monitor-daemonset.yaml
+```
+
+# 执行单个任务的Pod
+Kubernates通过Job资源完成只想运行完成工作后就终止任务的情况。
+- 创建一个Job运行一个pod
+```bash
+kubectl create -f batch-job.yaml
+```
+- 顺序运行Job pod -- completions
+```batch
+kubectl create -f multi-completion-batch-job.yaml
+```
+- 并行Job pod
+```batch
+kubectl create -f multi-completion-parallel-batch-job.yaml
+```
+- 限制Job pod完成任务时间--activeDeadlineSeconds
+   * 如果pod运行时间超过次时间，系统将尝试终止pod,并将job标记为失败。
+- Cron Job--安排job定期运行或在将来运行一次
+```batch
+kubectl create -f cronjob.yaml
+```
+- 指定截止时间----startingDeadlineSeconds
+```bash
+startingDeadlineSeconds: 15
+// 任务必须在预定时间后15内运行，否则任务将不会运行，并将显示为Failed。
+```

@@ -1,0 +1,24 @@
+apiVersion: apps/v1beta2 
+kind: ReplicaSet
+metadata:
+  name: kubia-test
+spec:
+  replicas: 3
+  selector:
+    matchExpressions:
+      - {key: FrontEnd, operator: In, values: [React, Angular]}
+      - {key: HandsonTable, operator: DoesNotExist}
+      - {key: Webpack, operator: In, values: [V4.0.1,V5.0.3]}
+  template:
+    metadata:
+      name: app-five
+      labels:
+        FrontEnd: React
+        Language: JS
+        Webpack: V4.0.1 
+    spec:
+      containers:
+      - name: kubia
+        image: shuanger/kubia
+        ports:
+        - containerPort: 8080

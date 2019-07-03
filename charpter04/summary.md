@@ -108,6 +108,7 @@ kubectl delete rc kubia --cascade=false
 # ReplicaSet 
 ReplicaSet是新一代的ReplicationController, 最终要完全替换掉ReplicationController。
 - ReplicaSet功能与ReplicationController完全相同，但具有更加强大的标签选择器。具体体现在ReplictionController的标签选择器只允许包含某个标签的匹配pod.但是ReplicaSet可以匹配缺少某个标签的pod，包含特定标签的pod,匹配多个标签的pod等。
+RS和RC只能管理的yaml文件只能配置一个pod模版, 也可以不配置模版，它们会管理空间内label能够匹配的pod.
 ## 创建ReplicaSet
 ```bash 
 kubectl create -f kubia-replicaSet.yaml

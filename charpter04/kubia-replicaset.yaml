@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: kubia
-    matchExpresss :
+    matchExpressions:
       - key: app
         operator: In
         values:

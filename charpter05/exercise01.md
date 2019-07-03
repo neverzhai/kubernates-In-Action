@@ -1,0 +1,14 @@
+- 什么是Service，使用Service的好处是什么？
+- How exactly do you define which pods are part of the service and which aren’t?
+- Create a service by yaml, selector is 'app=hello-world'
+- 创建3个label app=hello-world的Pod，创建一个service “k8s-hello-svc”, expose 这三个pod, 并测试每次会访问到不同的pod (exec 方式)
+- 使service “k8s-hello-svc”有多个端口 http: 80, https:443
+- 改变pod的端口，使service仍然work  （使用命名的端口方式）
+- 在cluster内部通过FQDN Connect service "k8s-hello-svc”
+- Endpoint 资源是做什么的？
+- 如何access external service
+- Expose service to the external client by NodePort
+- Expose service to the external client  by LoadBalancer
+- Expose service to the external client by Ingress
+- Exposes multiple services through a single Ingress
+- How does Ingress work? 

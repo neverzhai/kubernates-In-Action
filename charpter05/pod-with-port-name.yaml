@@ -1,0 +1,27 @@
+apiVersion: apps/v1beta2 
+kind: ReplicaSet
+metadata:
+  name: kubia
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-world
+    matchExpressions:
+      - key: app
+        operator: In
+        values:
+          - hello-world
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+      - name: kubia
+        image: shuanger/kubia
+        ports:
+        - name: http
+          containerPort: 8080
+        - name: https
+          containerPort: 8443
